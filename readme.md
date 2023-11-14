@@ -1,7 +1,7 @@
 # YouTube Transcriber
 This application is a YouTube Transcriber built with Python, Streamlit, AssemblyAI, and other libraries. It allows users to input a YouTube link and get the transcription of the audio in the video. The transcription is done using AssemblyAI's API.
 <!-- ![YouTube Transcriber Site](./ytt/ytt.png "caption") -->
-| ![YouTube Transcriber Site](./ytt/ytt.png) |
+| ![YouTube Transcriber Site](https://i.ibb.co/WDDGmK2/ytt.png) |
 |:--:|
 | *YouTube Transcriber Homepage* |
 
