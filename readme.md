@@ -30,7 +30,7 @@ The application uses the `yt_dlp` library to download the audio from the YouTube
 3. Run the ytt.py file
 
 ## Note
-This application requires an API key from AssemblyAI for the transcription. The key should be stored in a configure.py file in the format AUTH_KEY = 'your_api_key'.
+This application requires an API key from AssemblyAI for the transcription. You can acquire one [here](https://www.assemblyai.com/app).
 
 ## Limitations
 The formatting of the transcripts and overall speed still need some work.

@@ -4,7 +4,11 @@ import threading
 import yt_dlp
 import assemblyai as aai
 import streamlit as st
-from configure import AUTH_KEY
+
+with st.sidebar:
+    #logo
+    KEY = st.text_input("Enter your API Key")
+    st.write("You can get your API Key from [here](https://www.assemblyai.com/app)")
 
 # Constants
 CHUNK_SIZE = 5242880  # 5MB
@@ -14,6 +18,14 @@ YDL_OPTS = {
     'ffmpeg-location': './',
     'outtmpl': "./%(id)s.%(ext)s",
 }
+
+if KEY != '':
+    AUTH_KEY = KEY
+else:
+    st.write("Please enter your API Key")
+    st.stop()
+
+
 HEADERS_AUTH_ONLY = {'authorization': AUTH_KEY}
 HEADERS = {"authorization": AUTH_KEY, "content-type": "application/json"}
 TRANSCRIPT_ENDPOINT = "https://api.assemblyai.com/v2/transcript"
@@ -155,8 +167,8 @@ with col4:
     if st.button("Toggle Transcript"):
         st.session_state['show_transcript'] = not st.session_state['show_transcript']
 
-    if st.session_state['show_transcript']:
-        st.text_area("Transcript", value=formatted_transcript, height=500)
+if st.session_state['show_transcript']:
+    st.text_area("Transcript", value=formatted_transcript, height=500)
 
 
 
